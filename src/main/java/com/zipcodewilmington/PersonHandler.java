@@ -12,49 +12,51 @@ public class PersonHandler {
         this.personArray = personArray;
     }
 
-    public String whileLoop() {
-        String result = "";
 
+         // while `counter` is less than length of array
+        // begin loop
+        // use `counter` to identify the `current Person` in the array
+        // get `string Representation` of `currentPerson`
+        // append `stringRepresentation` to `result` variable
+        // end loop
         // create a `counter`
-        int counter =0;
-        // while `counter` is less than length of array
-            // begin loop
-               // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-        while(counter < personArray.length)
-        {
-            String currentPerson = personArray[counter].toString();
-            result += currentPerson;
-            counter++;
 
+        public String whileLoop() {
+            String result = "";
+
+            int i = 0;
+        while (i < personArray.length){
+            Person currentPerson = personArray[i];
+            String newString = currentPerson.toString();
+            result += newString;
+            i++;
         }
-
         return result;
-    }
+
+            }
 
 
+    // identify initial value
+    // identify terminal condition
+    // identify increment
+    // use the above clauses to declare for-loop signature
+    // begin loop
+    // use `counter` to identify the `current Person` in the array
+    // get `string Representation` of `currentPerson`
+    // append `stringRepresentation` to `result` variable
+    // end loop
 
     public String forLoop() {
         String result = "";
         String counter = "currentPerson";
-        // identify initial value
-        // identify terminal condition
-        // identify increment
+
      for (int i = 0; i < personArray.length; i++){
-         String currentPerson = personArray[i].toString();
-         result += currentPerson;
+         Person currentPerson = personArray[i];             //     this one also works !!!
+         String newString = currentPerson.toString();           // enves de las dos 54+55
+                                                        // String currentPerson = personArray[i].toString();
+         result += newString;
 
      }
-        // use the above clauses to declare for-loop signature
-            // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-
-
         return result;
     }
 
@@ -62,36 +64,23 @@ public class PersonHandler {
 
     public String forEachLoop() {
         String result = "";
-        String counter = "currentPerson";
+ //       // identify array's type
+ //       // identify array's variable-name
 
-        for (Person peps : personArray){
+ //        // use the above discoveries to declare for-each-loop signature
+ //       // begin loop
+        for (Person currentPerson : personArray){
 
-           // String currentPerson = personArray[].toString();
-            result += peps.toString();
+ //       // get `string Representation` of `currentPerson`
+           String peps = currentPerson.toString();
+
+//            // append `stringRepresentation` to `result` variable
+            result += currentPerson;
 
         }
-
-
-
-
-
-
-
-
-        // identify array's type
-        // identify array's variable-name
-
-        // use the above discoveries to declare for-each-loop signature
-            // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
-            // end loop
-
-
-
-
         return result;
-    }
+    }// end loop
+
 
 
     public Person[] getPersonArray() {
